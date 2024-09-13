@@ -1,0 +1,689 @@
+/* General Styles */
+
+:root {
+  --text-dark: #171717;
+  --text-light: #525252;
+  --extra-light: #a3a3a3;
+  --white: #ffffff;
+  --max-width: 1200px;
+  --header-font: "Merriweather", serif;}
+  
+  @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+  
+
+
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  background-color: #f4f4f4;
+  scroll-behavior: smooth;
+
+}
+
+
+/* Navigation Styles */
+nav {
+  position:flex;
+  top: 20rem;
+  width: 100%;
+  background-color:#fff;
+  z-index: 10;
+  padding: 1rem;
+}
+
+.nav__header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+}
+
+.nav__links {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__links li {
+  margin: 0 15px;
+}
+
+.nav__links li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+.nav__links li a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+.nav__logo img {
+  max-height: 50px;
+}
+
+/* Header Container Styles */
+.header__photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.name {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav__links {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .profile-pic {
+      width: 150px;
+      height: 150px;
+  }
+
+  .name {
+      font-size: 2.5rem;
+  }
+}
+.centered-text {
+  text-align: center; /* Center-aligns the text horizontally */
+  padding: 15px; /* Optional: adds some space around the text */
+}
+
+.centered-text p {
+  display: block; /* Allows the element to have transitions */
+  margin: 10px  20px; /* Optional: removes default margins */
+  font-size: 20px; /* Example font size */
+  transition: color 0.3s ease, transform 0.3s ease; /* Adds a transition effect */
+}
+
+.centered-text p:hover {
+  color: #ff6347; /* Example color change on hover */
+  transform: scale(1.05); /* Example scaling effect on hover */
+}
+
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+.section__header {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.section__description {
+  color: var(--text-light);
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white);
+  background-color: var(--text-dark);
+  border-radius: 5px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--text-light);
+}
+
+
+img {
+  display: flex;
+  width: 100%;
+  
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.section__container.about__container {
+  padding: 40px 20px; /* Add padding for spacing inside the container */
+   /* Replace with your image path */
+  background-size: cover; /* Ensure the background image covers the entire container */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* Prevent the background image from repeating */
+  color: #624b4b; /* Set text color to white for better contrast */
+  text-align: center; /* Center align the text */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 40px;
+  height: 600px;
+}
+.section__header {
+  font-size: 2.5em; /* Adjust the font size */
+  margin-bottom: 20px; /* Add some space below the header */
+  font-weight: bold;
+  color: #FFD700;
+}
+.section__description {
+  font-size: 1.2em; /* Adjust the font size */
+  max-width: 800px; /* Limit the width of the text for better readability */
+  margin-bottom: 30px; /* Add some space below the description */
+  color:black;
+}
+
+.my img {
+  max-width: 100%;
+  height: auto; /* Ensure the image scales responsively */
+  border-radius: 10px; /* Optional: Add rounded corners to the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Optional: Add a subtle shadow to the image */
+}
+
+.about__container img {
+  max-width: 170px;
+  margin-inline: auto;
+}
+
+.portfolio__grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+  
+}
+
+.portfolio__card {
+  position: relative;
+  isolation: isolate;
+  
+}
+
+.portfolio__card::after {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  font-family: var(--header-font);
+  color: var(--white);
+}
+
+.portfolio__card:nth-child(1)::after {
+  content: "Portraits";
+  
+ 
+}
+
+.portfolio__card:nth-child(2)::after {
+  content: "Weddings";
+}
+
+.portfolio__card:nth-child(3)::after {
+  content: "Fashions";
+}
+
+.portfolio__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 45%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.portfolio__card:hover .portfolio__content {
+  opacity: 1;
+}
+
+
+.service {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("assets/service.jpg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.service__container .section__header {
+  color: var(--white);
+}
+
+.service__container .section__description {
+  max-width: 600px;
+  margin-inline: auto;
+  color: var(--extra-light);
+}
+
+.service__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.service__card {
+  text-align: center;
+}
+
+.service__card h4 {
+  position: relative;
+  isolation: isolate;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  font-size: 1.75rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color: var(--white);
+}
+
+.service__card h4::after {
+  position: absolute;
+  content: "~";
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  line-height: 0;
+}
+
+.service__card p {
+  color: var(--extra-light);
+  line-height: 1.75rem;
+}
+
+
+
+section__container {
+  padding: 20px;
+  text-align: center;
+}
+
+.section__header {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Gallery Grid Styling */
+.gallery__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.gallery__grid img {
+  width: 100%;
+  height: 200px; /* Fixed height for uniform size */
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover Effect - Pop up Image */
+.gallery__grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Button Styling */
+.gallery__btn {
+  text-align: center;
+}
+
+.btn {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+/* Fullscreen View */
+.fullscreen-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.fullscreen-overlay img {
+  width: auto; /* Let the image take its natural width */
+  height: auto; /* Let the image take its natural height */
+  max-width: 90%; /* Ensure it doesn't overflow the screen */
+  max-height: 90%; /* Ensure it doesn't overflow the screen */
+  border-radius: 10px;
+}
+
+/* Show the Fullscreen View */
+.fullscreen-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Close Button */
+.fullscreen-overlay::after {
+  content: "✕";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gallery__grid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
+
+  .gallery__grid img {
+    height: 150px; /* Reduce height for smaller screens */
+  }
+
+  .section__header {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+
+
+
+
+@media (max-width: 480px) {
+  .gallery__grid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .gallery__grid img {
+    height: 120px; /* Further reduce height for small screens */
+  }
+
+  .section__header {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+}
+.flogo{
+  width: 2px px;
+}
+
+.blog {
+  background-color: rgb(11, 5, 5);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-top: 3rem;
+}
+
+.blog__container {
+  padding-block: 8rem;
+  display: flex\;
+  
+}
+
+.blog__content {
+  text-align: center;
+  grid-column: 1/3;
+  
+}
+
+.blog__content .section__header {
+  margin-bottom: 2rem;
+  color: var(--white);
+}
+
+.blog__content h4 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  font-family: var(--header-font);
+  color: var(--white);
+}
+
+.blog__content p {
+  margin-bottom: 2rem;
+  line-height: 1.75rem;
+  color: var(--extra-light);
+}
+
+.blog__content .btn {
+  background-color: transparent;
+  border: 1px solid var(--white);
+}
+
+.instagram__container {
+  overflow: hidden;
+}
+
+.instagram__flex {
+  margin-top: 2rem;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  animation: scroll 45s linear infinite;
+}
+
+.instagram__flex img {
+  max-width: 135px;
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+
+.footer__container {
+  display: grid;
+  gap: 4rem 0;
+  align-items: center;
+}
+
+.footer__col {
+  padding-inline: 2rem;
+}
+
+.footer__container img {
+  max-width: 170px;
+  margin-inline: auto;
+  margin-bottom: 2rem;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer__socials a {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+}
+
+.footer__socials a:hover {
+  color: var(--text-light);
+}
+
+.footer__links {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.footer__links a {
+  display: block;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.footer__links a:hover {
+  color: var(--text-light);
+}
+
+.footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.footer__col p {
+  color: var(--text-light);
+  line-height: 1.75rem;
+  text-align: center;
+}
+
+.footer__bar {
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: var(--extra-light);
+  background-color: var(--text-dark);
+  text-align: center;
+}
+
+@media (width > 540px) {
+  .portfolio__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__col:nth-child(1) {
+    grid-area: 1/1/2/3;
+  }
+
+  .footer__col:nth-child(3) {
+    border-left: 2px solid var(--text-dark);
+  }
+}
+
+@media (width > 768px) {
+  .header {
+    min-height: 650px;
+  }
+
+
+  .portfolio__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .service__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .blog__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .blog__content {
+    grid-column: 2/3;
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer__col:nth-child(1) {
+    grid-area: 1/2/2/3;
+    border-left: 2px solid var(--text-dark);
+    border-right: 2px solid var(--text-dark);
+  }
+
+  .footer__col:nth-child(3) {
+    border: none;
+  }
+}
+
+@media (width > 1024px) {
+  .header {
+    min-height: 700px;
+  }
+
+  .portfolio__grid {
+    gap: 2rem;
+  }
+}
