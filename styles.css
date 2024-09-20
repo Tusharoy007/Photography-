@@ -664,7 +664,7 @@ section__container {
   }
 
   .footer__container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 2fr);
   }
 
   .footer__col:nth-child(1) {
